@@ -8,11 +8,11 @@ FROM colinrhodes/base
 
 MAINTAINER Colin Rhodes <colin@colin-rhodes.com>
 
-RUN apt-get install -yq xorg unzip
-
-RUN apt-get install -yq wget
+RUN apt-get install -yq xorg unzip wget
 
 ADD input.txt /mcr-install/input.txt
+
+# Did this all in one line to avoid bloating the image
 
 RUN cd /mcr-install && \
     wget -nv http://www.mathworks.com/supportfiles/MCR_Runtime/R2013a/MCR_R2013a_glnxa64_installer.zip && \
