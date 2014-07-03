@@ -21,5 +21,3 @@ RUN cd /mcr-install && \
     ./install -inputFile input.txt && \
     cd / && \
     rm -rf mcr-install
-
-WORKDIR /
